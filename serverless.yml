@@ -1,17 +1,16 @@
 service: api-testing
+
 provider:
   name: aws
   runtime: nodejs20.x
   region: ap-south-1
 
-
-
-function:
+functions:
   Lambdafunction:
     handler: handler.lambda_handler
     timeout: 30
     events:
-      - https:
+      - http:
           path: /test
           method: GET
           cors: true
