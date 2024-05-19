@@ -3,16 +3,18 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18
-    commands:
-      - echo Installing dependencies...
-      - npm install
+      nodejs: 18.x
 
+    commands:
   pre_build:
     commands:
       -  npm i aws-sdk
       -  npm i -g serverless
-
+      
   build:
     commands:
-      - serverless deploy
+      - |- 
+        serverless deploy
+artifacts:
+  files:
+    - '**/*'
