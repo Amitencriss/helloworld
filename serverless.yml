@@ -6,7 +6,7 @@ provider:
 
 
 
-funcation:
+function:
   Lambdafunction:
     handler: handler.lambda_handler
     timeout: 30
