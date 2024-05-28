@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       -  npm i aws-sdk
-      -  npm i -g serverless
+      -  npm i -g serverless@3.2.1
       
   build:
     commands:
